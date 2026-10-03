@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef3ef;
+  color: #25332d;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  padding: 2rem 1.5rem 1.5rem;
+  background: #176b54;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  line-height: 1.15;
+}
+
+header p {
+  margin: 0.5rem 0 1.25rem;
+  color: #d7eee4;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: #d5ee74;
+  color: #20372d;
+}
+
+main {
+  width: calc(100% - 2rem);
+  max-width: 860px;
+  margin: 2rem auto;
+}
+
+main > h2 {
+  margin: 0 0 1rem;
+  color: #176b54;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+}
+
+main > section,
+main > form {
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border: 1px solid #d8e2dc;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(37 51 45 / 6%);
+}
+
+section h3 {
+  margin: 0 0 0.8rem;
+  color: #176b54;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+section ol {
+  margin-bottom: 0;
+  padding-left: 1.4rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  min-height: 100%;
+  padding: 1rem;
+  border-left: 4px solid #df9d38;
+  border-radius: 3px;
+  background: #f2f6f3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #cbd8d0;
+  text-align: left;
+}
+
+th {
+  background: #e8f1ec;
+  color: #174d3f;
+}
+
+form p {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #aebfb5;
+  border-radius: 4px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #176b54;
+  outline: 3px solid rgb(23 107 84 / 18%);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 4px;
+  background: #176b54;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+button:hover,
+button:focus-visible {
+  transform: translateY(-1px);
+  background: #104d3d;
+}
+
+footer {
+  padding: 0.5rem 1rem 1.5rem;
+  color: #52665b;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1.25rem 1rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    width: calc(100% - 1.25rem);
+    margin: 1.25rem auto;
+  }
+
+  main > section,
+  main > form {
+    padding: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.55rem;
+  }
+}
