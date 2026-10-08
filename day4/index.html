@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickNotes | Live Note</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="QuickNotes home">QuickNotes<span>.</span></a>
+    <button id="theme-toggle" class="theme-toggle" type="button">Dark mode</button>
+  </header>
+
+  <main>
+    <section class="editor" aria-labelledby="page-title">
+      <div class="editor-heading">
+        <p class="eyebrow">A quiet place to think</p>
+        <h1 id="page-title">Today's note</h1>
+      </div>
+
+      <label for="note-text">What would you like to remember?</label>
+      <textarea id="note-text" name="note-text" rows="10" placeholder="Start writing here..."></textarea>
+
+      <div class="editor-footer" aria-live="polite">
+        <div class="counts">
+          <p id="char-count">0 / 200 characters</p>
+          <p id="word-count">0 words</p>
+        </div>
+        <button id="clear-btn" class="clear-btn" type="button">Clear note</button>
+      </div>
+    </section>
+    <p class="save-status">Your draft is saved on this device.</p>
+  </main>
+</body>
+</html>
