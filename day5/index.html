@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Directory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="users.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html">People<span>/</span>Directory</a>
+    <p>JSONPlaceholder · User records</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="page-title">
+      <div class="page-heading">
+        <p class="eyebrow">Directory / 05</p>
+        <h1 id="page-title">People, at a glance.</h1>
+        <p class="intro">Browse contact details and company information for the full user list.</p>
+      </div>
+
+      <div class="directory-controls">
+        <button id="load-users" type="button">Load users</button>
+        <div class="filter-control">
+          <label for="filter-input">Filter by name</label>
+          <input id="filter-input" name="filter" type="search" placeholder="Try a name..." autocomplete="off">
+        </div>
+      </div>
+
+      <p id="status" role="status" aria-live="polite">Select “Load users” to view the directory.</p>
+      <ul id="users-list" aria-label="Users"></ul>
+    </section>
+  </main>
+</body>
+</html>
