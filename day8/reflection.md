@@ -1,0 +1,7 @@
+# Reflection
+
+The most difficult concept in the course was designing for correctness under concurrency while also planning for large traffic spikes. It is easy to describe a seat as “available” on a page, but two buyers can see that status at the same time. I addressed this by treating the database transaction—not the page or cache—as the authority: a hold locks or conditionally updates the seat, and constraints provide a final defense against duplicate allocation. I also separated the waiting-room rate from the much higher arrival rate so the design does not assume that adding application servers alone solves a write bottleneck.
+
+Based on the feedback I received, I would improve the capstone by making architectural trade-offs more explicit and tracing failure recovery across every critical component. The design now calls out where availability is sacrificed for correctness, how queue durability affects fairness, and how database failover, payment reconciliation, and redundant workers avoid turning individual failures into lost orders or duplicate tickets. I would further improve it by testing those recovery paths with realistic failure scenarios instead of only describing them.
+
+Next, I will learn more about distributed systems operations: database failover and replication guarantees, queue delivery semantics, observability, and load testing. I want to be able to validate estimates experimentally and understand how a system behaves when its assumptions—such as steady traffic or a healthy payment provider—stop being true.
